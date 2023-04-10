@@ -17,18 +17,18 @@ contents:
     - libffi-dev
     - poetry
     - build-base
-    - python-3.11
-    - py3.11-pip
+    - python-3.10
+    - py3.10-pip
 
-accounts:
-  groups:
-    - groupname: nonroot
-      gid: 65532
-  users:
-    - username: nonroot
-      uid: 65532
-      gid: 65532
-  run-as: 65532
+# accounts:
+#   groups:
+#     - groupname: nonroot
+#       gid: 65532
+#   users:
+#     - username: nonroot
+#       uid: 65532
+#       gid: 65532
+#   run-as: 65532
 
 entrypoint:
   command: /usr/bin/python
