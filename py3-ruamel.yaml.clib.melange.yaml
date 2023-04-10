@@ -30,6 +30,6 @@ pipeline:
       uri: https://files.pythonhosted.org/packages/source/r/ruamel.yaml.clib/ruamel.yaml.clib-${{package.version}}.tar.gz
       expected-sha512: b752b17ddf5da99fa6ee18b0ed1836da9a5c3dc58ab8b326d7aa97f6e4daadb298a2f149d79a650ab0326f52873aee6b1bc68cdaeb59465b4fafce49553ce69e
   - runs: |
-      python3 setup.py build
-      RUAMEL_NO_PIP_INSTALL_CHECK=1 python3 setup.py install --skip-build --root="${{targets.destdir}}"
+      python3.10 setup.py build
+      RUAMEL_NO_PIP_INSTALL_CHECK=1 python3.10 setup.py install --skip-build --root="${{targets.destdir}}"
   - uses: strip
